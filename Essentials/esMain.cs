@@ -56,7 +56,7 @@ namespace Essentials {
           var amtToAdd = item.maxStack - item.stack;
           if (item.stack > 0 && amtToAdd > 0 && !item.Name.ToLower().Contains("coin")) {
             full = false;
-            args.Player.GiveItem(item.type, item.Name, item.width, item.height, amtToAdd);
+            args.Player.GiveItem(item.type, amtToAdd);
           }
         }
         if (!full)
@@ -68,7 +68,7 @@ namespace Essentials {
         var holding = args.Player.TPlayer.inventory[args.TPlayer.selectedItem];
         var amtToAdd = holding.maxStack - holding.stack;
         if (holding.stack > 0 && amtToAdd > 0)
-          args.Player.GiveItem(holding.type, holding.Name, holding.width, holding.height, amtToAdd);
+          args.Player.GiveItem(holding.type, amtToAdd);
         if (amtToAdd == 0)
           args.Player.SendErrorMessage("Your {0} is already full.", holding.Name);
         else

@@ -193,7 +193,7 @@ namespace SignCommands {
         return;
       }
 
-      if (_users.Count > 0 && !_users.Contains(sPly.TsPlayer.User.Name)) {
+      if (_users.Count > 0 && !_users.Contains(sPly.TsPlayer.Account.Name)) {
         if (sPly.AlertPermissionCooldown == 0) {
           sPly.TsPlayer.SendErrorMessage("You do not have access to this sign");
           sPly.AlertPermissionCooldown = 3;
