@@ -1,0 +1,8 @@
+# Build Folders (you can keep bin if you'd like, to store dlls and pdbs)
+obj
+
+# mstest test results
+TestResults
+/.vs/Essentials and Sign Commands
+/Build
+/packages/Newtonsoft.Json.10.0.2
